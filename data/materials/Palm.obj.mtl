@@ -1,0 +1,23 @@
+#
+# Wavefront material file
+# Converted by Meshlab Group
+#
+
+newmtl material_0
+Ka 0.584314 0.584314 0.584314
+Kd 0.584314 0.584314 0.584314
+Ks 0.898039 0.898039 0.898039
+Tr 1.000000
+illum 1
+Ns 0.000000
+map_Kd leaf.jpg
+
+newmtl material_1
+Ka 0.584314 0.584314 0.584314
+Kd 0.584314 0.584314 0.584314
+Ks 0.898039 0.898039 0.898039
+Tr 1.000000
+illum 1
+Ns 0.000000
+map_Kd bark.jpg
+

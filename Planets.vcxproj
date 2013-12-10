@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2EC400BC-D573-49E2-B096-8A4412C55199}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Planets</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;SDL.lib;SDLmain.lib;glew32.lib;glew32s.lib;SDL_image.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;SDL.lib;SDLmain.lib;glew32.lib;glew32s.lib;SDL_image.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Base\FontManager.cpp" />
+    <ClCompile Include="Base\GLUtil.cpp" />
+    <ClCompile Include="Base\MainLoop.cpp" />
+    <ClCompile Include="Base\MapGenerator.cpp" />
+    <ClCompile Include="Base\Math.cpp" />
+    <ClCompile Include="Base\Matrix.cpp" />
+    <ClCompile Include="Base\Noise.cpp" />
+    <ClCompile Include="Base\ModelManager.cpp" />
+    <ClCompile Include="Base\ObjectManager.cpp" />
+    <ClCompile Include="Base\PathFollower.cpp" />
+    <ClCompile Include="Base\PathLoader.cpp" />
+    <ClCompile Include="Base\PixelBuffer.cpp" />
+    <ClCompile Include="Base\Screen.cpp" />
+    <ClCompile Include="Base\Texture.cpp" />
+    <ClCompile Include="Objects\Cat.cpp" />
+    <ClCompile Include="Objects\Box.cpp" />
+    <ClCompile Include="Objects\Hero.cpp" />
+    <ClCompile Include="Objects\Plant1.cpp" />
+    <ClCompile Include="GLee.c" />
+    <ClCompile Include="Base\LodManager.cpp" />
+    <ClCompile Include="Base\GroupObjectManager.cpp" />
+    <ClCompile Include="Objects\GroupObjectRenderableBase.cpp" />
+    <ClCompile Include="Logic\DesignLogic.cpp" />
+    <ClCompile Include="Logic\GameLogic.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Base\MaterialManager.cpp" />
+    <ClCompile Include="Objects\HeightMap.cpp" />
+    <ClCompile Include="Objects\Plant.cpp" />
+    <ClCompile Include="Objects\Planet.cpp" />
+    <ClCompile Include="Objects\PlanetaryMap.cpp" />
+    <ClCompile Include="Objects\ROAMSphere.cpp" />
+    <ClCompile Include="Objects\ROAMTriangle.cpp" />
+    <ClCompile Include="Objects\Ship.cpp" />
+    <ClCompile Include="Objects\SkyBox.cpp" />
+    <ClCompile Include="Objects\SurfaceMap.cpp" />
+    <ClCompile Include="Objects\Text.cpp" />
+    <ClCompile Include="pgr.cpp" />
+    <ClCompile Include="Base\TextureManager.cpp" />
+    <ClCompile Include="Base\World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base\FontManager.h" />
+    <ClInclude Include="Base\GLUtil.h" />
+    <ClInclude Include="Base\ListTemplates.h" />
+    <ClInclude Include="Base\MainLoop.h" />
+    <ClInclude Include="Base\MapGenerator.h" />
+    <ClInclude Include="Base\Math.h" />
+    <ClInclude Include="Base\Matrix.h" />
+    <ClInclude Include="Base\Noise.h" />
+    <ClInclude Include="Base\ModelManager.h" />
+    <ClInclude Include="Base\ObjectManager.h" />
+    <ClInclude Include="Base\PathFollower.h" />
+    <ClInclude Include="Base\PathLoader.h" />
+    <ClInclude Include="Base\PixelBuffer.h" />
+    <ClInclude Include="Base\Screen.h" />
+    <ClInclude Include="Base\Texture.h" />
+    <ClInclude Include="Objects\Cat.h" />
+    <ClInclude Include="Objects\Box.h" />
+    <ClInclude Include="Objects\Hero.h" />
+    <ClInclude Include="Objects\Plant1.h" />
+    <ClInclude Include="GLee.h" />
+    <ClInclude Include="Base\LodManager.h" />
+    <ClInclude Include="Base\GroupObjectManager.h" />
+    <ClInclude Include="Objects\GroupObjectRenderableBase.h" />
+    <ClInclude Include="Logic\AbstractLogic.h" />
+    <ClInclude Include="Logic\DesignLogic.h" />
+    <ClInclude Include="Logic\GameLogic.h" />
+    <ClInclude Include="Base\MaterialManager.h" />
+    <ClInclude Include="Objects\HeightMap.h" />
+    <ClInclude Include="Objects\Object.h" />
+    <ClInclude Include="Objects\Plant.h" />
+    <ClInclude Include="Objects\Planet.h" />
+    <ClInclude Include="Objects\PlanetaryMap.h" />
+    <ClInclude Include="Objects\ROAMDiamond.h" />
+    <ClInclude Include="Objects\ROAMSphere.h" />
+    <ClInclude Include="Objects\ROAMTriangle.h" />
+    <ClInclude Include="Objects\Ship.h" />
+    <ClInclude Include="Objects\SkyBox.h" />
+    <ClInclude Include="Objects\SurfaceMap.h" />
+    <ClInclude Include="Objects\Text.h" />
+    <ClInclude Include="pgr.h" />
+    <ClInclude Include="Base\TextureManager.h" />
+    <ClInclude Include="Base\World.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
